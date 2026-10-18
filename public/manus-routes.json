@@ -1,0 +1,8 @@
+{
+  "routes": [
+    { "path": "/", "title": "Auditia Legal — Revisão Técnica de Crédito" },
+    { "path": "/privacidade", "title": "Política de Privacidade — Auditia Legal" },
+    { "path": "/termos", "title": "Termos de Uso — Auditia Legal" },
+    { "path": "/cookies", "title": "Política de Cookies — Auditia Legal" }
+  ]
+}

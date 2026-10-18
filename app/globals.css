@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+:root {
+  color-scheme: light;
+  --ink: #0f172a;
+  --paper: #f8fafc;
+  --muted: #64748b;
+  --line: #cbd5e1;
+  --gold: #d4af37;
+  --gold-soft: #e9d69a;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+::selection { background: var(--gold-soft); color: var(--ink); }
+
+@layer base {
+  h1, h2, h3, h4 { font-family: var(--font-playfair), Georgia, serif; font-weight: 500; letter-spacing: -0.025em; }
+  a, button, input, select { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 3px solid rgba(212, 175, 55, .7); outline-offset: 3px; }
+}
+
+@layer components {
+  .eyebrow { @apply text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-slate-500; }
+  .section-label { @apply mb-5 flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-slate-500; }
+  .section-label::before { content: ''; @apply h-px w-8 bg-gold; }
+  .editorial-rule { @apply border-t border-slate-300/80; }
+  .button-gold { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-gold px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:bg-[#e2c85b] hover:shadow-lg hover:shadow-gold/20; }
+  .button-outline { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-slate-300 bg-transparent px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:border-ink hover:bg-white; }
+  .card-editorial { @apply border border-slate-300/80 bg-white/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-slate-400 hover:bg-white hover:shadow-editorial; }
+  .field { @apply mt-2 min-h-12 w-full rounded-sm border border-slate-300 bg-white px-4 py-3 text-base text-ink outline-none transition placeholder:text-slate-400 focus:border-ink focus:ring-2 focus:ring-gold/30; }
+  .field-error { @apply border-red-400 focus:border-red-500 focus:ring-red-200; }
+}
+
+.hero-image {
+  background-image: linear-gradient(90deg, rgba(15, 23, 42, .98) 0%, rgba(15, 23, 42, .88) 34%, rgba(15, 23, 42, .2) 78%, rgba(15, 23, 42, .08) 100%), url('/manus-storage/async-images/13SCgrLNmgK74wyYvtnZSb/image-1.webp');
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .hero-image { background-position: 63% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
