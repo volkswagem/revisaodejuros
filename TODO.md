@@ -21,6 +21,6 @@
   - Incluir footer com placeholders visíveis para razão social, CNPJ, endereço, OAB, email, telefone, política de privacidade, termos de uso, cookies e copyright 2026.
   - Entregar checklist de conformidade Google Ads verificando clareza da oferta, acessibilidade/mobile, LGPD/HTTPS/robots, SEO e ausência de spammy behavior.
 
-- [ ] **Build e entrega**
+- [x] **Build e entrega**
   - Garantir build/arranque Node em `PORT`, validar diagnósticos e endpoints públicos.
   - Ligar o projecto ao repositório GitHub `volkswagem/revisaodejuros`, preparar configuração Render Node e só declarar URL pública após confirmação de deploy bem-sucedido.

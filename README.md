@@ -15,7 +15,7 @@ A aplicação usa Next.js App Router, Tailwind CSS e um endpoint demonstrativo e
 
 - Runtime: Node
 - Build command: `npm install && npm run build`
-- Start command: `npm start`
+- Start command: `npm start` (executa o servidor standalone produzido pelo build)
 - Health path: `/`
 - Environment: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_WHATSAPP_NUMBER`
 
